@@ -24,3 +24,8 @@ Git / GitHub workflow notes:
 
 Approved host push command:
 sudo docker exec -it openshell-cluster-nemoclaw sh -lc 'kubectl exec -it -n openshell chief -- sh -lc "git config --global --add safe.directory /sandbox/.openclaw-data/workspace >/dev/null 2>&1; cd /sandbox/.openclaw/workspace && git push"'
+
+OpenClaw security exception note:
+- /sandbox/.openclaw must remain accessible to the sandbox runtime.
+- Working compromise: /sandbox/.openclaw = 750 and /sandbox/.openclaw/openclaw.json = 640 with group sandbox.
+- Do not blindly force 700/600 if that breaks runtime access.
