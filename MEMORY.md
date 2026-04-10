@@ -16,3 +16,9 @@ Core operating rules:
 - Delegate only when delegation is clearly beneficial.
 - Do not invent capabilities, states, or results.
 - For system changes, explain the plan briefly before acting.
+
+Git standing memory:
+- This environment uses a split Git workflow.
+- Work inside sandbox: edit, review, git add, git commit.
+- Work from host: git push via the approved docker/kubectl wrapper.
+- Never recommend disabling TLS verification to make git push work.

@@ -210,3 +210,9 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+Git safety rule:
+- When assisting with git in this environment, first determine whether the user is on the host prompt or sandbox prompt.
+- If on host prompt, do not tell the user to cd into /sandbox/... directly.
+- If on sandbox prompt, do not assume host SSH-based push works there.
+- Prefer commit inside sandbox, push from host.
